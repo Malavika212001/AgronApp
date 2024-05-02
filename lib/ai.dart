@@ -14,7 +14,7 @@ class AiPage extends StatefulWidget {
 class _AiPageState extends State<AiPage> {
   TextEditingController textcontroller = TextEditingController();
   String chat = '';
-  //late ResponseModel _responseModel;
+  
 
 
 
@@ -81,12 +81,9 @@ class _AiPageState extends State<AiPage> {
                 icon: Icon(Icons.send),
                 onPressed: () async {
                   String message = textcontroller.text;
-                  //String response = await chatWithGpt(message);
-                  // setState(() {
-                  //   chat += 'You: $message\nAgron: $response\n\n';
-                  // });
+                  
                   textcontroller.clear();
-                 // print(response);
+                 
                 },
               ),
             ),
