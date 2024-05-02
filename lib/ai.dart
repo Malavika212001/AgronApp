@@ -80,7 +80,7 @@ class _AiPageState extends State<AiPage> {
               suffixIcon: IconButton(
                 icon: Icon(Icons.send),
                 onPressed: () async {
-                  String message = textcontroller.text;
+                  //String message = textcontroller.text;
                   
                   textcontroller.clear();
                  
