@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1050142212966",
+    "project_id": "agron-app",
+    "storage_bucket": "agron-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1050142212966:android:91f7c40fb7c73b728ebea7",
+        "android_client_info": {
+          "package_name": "com.example.agron"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq2bKTO5oGQSwnUCZwBhkwyla0pc4s45c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
