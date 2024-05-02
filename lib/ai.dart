@@ -16,37 +16,7 @@ class _AiPageState extends State<AiPage> {
   String chat = '';
   //late ResponseModel _responseModel;
 
-  @override
-  void initState() {
-    super.initState();
-    textcontroller =TextEditingController();
-  }
 
-  @override
-  void dispose() {
-    textcontroller.dispose();
-    super.dispose();
-  }
-Future<String> chatWithGpt(String message) async {
-  final response = await http.post(
-    Uri.parse('https://api.openai.com/v1/engines/davinci-codex/completions'),
-    headers: {
-      'Authorization': 'sk-proj-ujZlJv5AFQN9LfRjDb6ET3BlbkFJc9dkoXBxl3ybN0pLdQJC',
-      'Content-Type': 'application/json',
-    },
-    body: jsonEncode({
-      'prompt': message,
-      'max_tokens': 60,
-    }),
-  );
-
-  if (response.statusCode == 200) {
-    Map<String, dynamic> data = jsonDecode(response.body);
-    return data['choices'][0]['text']['content'].trim();
-  } else {
-    throw Exception('Failed to chat with GPT-3');
-  }
-}
 
 
 @override
@@ -111,12 +81,12 @@ Future<String> chatWithGpt(String message) async {
                 icon: Icon(Icons.send),
                 onPressed: () async {
                   String message = textcontroller.text;
-                  String response = await chatWithGpt(message);
-                  setState(() {
-                    chat += 'You: $message\nAgron: $response\n\n';
-                  });
+                  //String response = await chatWithGpt(message);
+                  // setState(() {
+                  //   chat += 'You: $message\nAgron: $response\n\n';
+                  // });
                   textcontroller.clear();
-                  print(response);
+                 // print(response);
                 },
               ),
             ),
